@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo:700|Poppins:300,400,400i,600|Open+Sans:300|Zilla+Slab:600&display=swap');
 
 body {
-    background-color: orange;
+    background-color: #fff;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 16px;
+    color: #000;
+    line-height: 1.75em;
 
 }
 
@@ -20,38 +22,39 @@ h6 {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 1.875em;
     text-align: center;
-    margin: 20px 0;
+    margin: 1.250em 0;
+    
 
 }
 
 h2 {
-    font-size: 28px;
-    background-color: red;
-    padding: 20px 20px 20px 0;
+    
+    font-size: 1.750em;
+    padding: 1.250em 1.250em 1.250em 0;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #ffffff;
-    margin-bottom: 20px;
+    letter-spacing: 0.125em;
+    color: #000;
+    margin-bottom: 1.250em;
 }
 
 h3 {
-    font-size: 25px;
-    margin: 20px 0;
+    font-size: 1.563em;
+    margin: 1.250em 0;
 }
 
 p {
-    margin-bottom: 30px;
-    line-height: 25px;
-    font-size: 18px;
+    margin-bottom: 1.875em;
+    
+    font-size: 1.125em;
 }
 
 /*default lists*/
 ol,
 ul {
-    margin: 20px 0;
-    font-size: 18px;
+    margin: 1.250em 0;
+    font-size: 1.125em;
 }
 
 ol {
@@ -63,8 +66,8 @@ ul {
 }
 
 li {
-    margin-left: 40px;
-    padding-bottom: 5px;
+    margin-left: 2.500em;
+    padding-bottom: 0.313em;
 }
 
 /* link styling */
@@ -98,7 +101,7 @@ nav ul li {
     margin-left: 0;
     /*    make them display across the page */
     display: inline;
-    margin-right: 10px;
+    margin-right: 0.625em;
 }
 
 /*remove the marginn on the last item*/
@@ -106,11 +109,11 @@ nav ul li:last-of-type {
     margin-right: 0;
 }
 
-nav ul li a {
-    background-color: #000000;
+nav ul li a, nav ul li a:visited {
+    border: 0.063em solid #fff;
     color: #ffffff;
     /*    padding when 2 numbers, TOP/BOTTOM LEFT/RIGHT*/
-    padding: 15px 30px;
+    padding: 0.938em 1.875em;
 }
 
 nav ul li a:hover {
@@ -123,59 +126,84 @@ nav ul li a:hover {
 
 /* base layout */
 .wrapper {
-    width: 980px;
+    width: 80%;
 
     /* MARGIN (shorthand): TOP/BOTTOM, LEFT/RIGHT */
     margin: 0 auto;
 }
 
 header {
-    background-color: aquamarine;
-    height: 150px;
+    height: 6.250em;
+    background-color: #8AB6CC;
 }
 
 h1 {
     display: inline-block;
     float: left;
-    margin-top: 35px;
+    margin-top: 1.188em;
+}
+h1 a, h1 a:visited {
+    color: #fff;
 }
 
 nav {
-    background-color: lightcoral;
-    height: 56px;
-    line-height: 56px;
+    height: 3.500em;
+    line-height: 3.500em;
     display: inline-block;
     float: right;
 
 }
 
 main {
-    background-color: peachpuff;
-    padding-bottom: 50px;
+    padding-bottom: 3.125em;
 }
 
 footer {
-    background-color: royalblue;
-    height: 200px;
-    padding-top: 20px;
+    background: #DFDFDF;
+    min-height: 6em;
+    padding-top: 1.250em;
 }
 
 /* general layout */
 
 img {
-    max-height: 600px;
+    max-height: 37.5em;
 }
 
 .left-image {
     float: left;
-    margin: 20px 20px 20px 0;
-    border: 1px solid #000000;
-    padding: 20px;
+    margin: 1.250em 1.250em 1.250em 0;
+    border: 0.063em solid #000000;
+    padding: 1.250em;
     /*    background-color: #ffffff;*/
 }
 
 footer p {
-    font-size: 14px;
+    font-size: 0.8em;
     text-align: center;
-    color: #ffffff;
+    color: #000;
+}
+
+/* if screen is larger than 1055px (desktop) */
+@media screen and (max-device-width: 1055px) {
+    .wrapper {
+        width: 100%;
+    }   
+}
+
+/* if screen is between 375px (mobile) and 768px (tablet) */
+@media screen and (min-device-width: 375px) and (max-device-width: 768px) {
+    h2 {
+        color: red;
+        margin-bottom: 0;
+        padding-bottom: 1em;
+    }
+
+}
+
+@media screen and (min-device-width: 375px) {
+    img {
+        max-width: 100%;
+        max-height: inherit;
+    }
 }
